@@ -1,0 +1,13 @@
+services:
+  cliente:
+    build:
+      contex: ./client
+    ports:
+      - "5173:80"
+    restart: unless-stopped
+    networks:
+      - demo-net
+
+networks:
+  demo-net:
+    extenal: true
